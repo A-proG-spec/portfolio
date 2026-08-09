@@ -1,0 +1,140 @@
+.services-section {
+  background: #FFFFFF;
+  padding: 64px 0;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.services-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/* Header */
+.services-header {
+  margin-bottom: 2.4rem;
+}
+
+.services-header .section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.services-header .section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.24rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.services-header .section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #444444;
+  max-width: 400px;
+  line-height: 1.8;
+  margin-top: 0.4rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.service-item {
+  padding: 1.6rem;
+  background: #F5F5F5;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.service-item:hover {
+  background: #FFFFFF;
+  border-color: #000000;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+}
+
+.service-icon {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.44rem;
+  color: #000000;
+  margin-bottom: 0.6rem;
+  display: block;
+  font-weight: 300;
+  will-change: transform;
+}
+
+.service-item h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.service-item p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: #444444;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 0;
+  }
+  
+  .services-container {
+    padding: 0 1.2rem;
+  }
+  
+  .services-header .section-title {
+    font-size: 1.76rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-item {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header .section-title {
+    font-size: 1.44rem;
+  }
+  
+  .service-item h3 {
+    font-size: 0.8rem;
+  }
+  
+  .service-item p {
+    font-size: 0.64rem;
+  }
+}
