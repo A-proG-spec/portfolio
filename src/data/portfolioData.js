@@ -4,7 +4,7 @@ export const portfolioData = {
   tagline: 'Building scalable web applications with the MERN stack. Software Engineering student at AASTU, passionate about creating impactful digital solutions.',
   
   stats: {
-    projects: '50+',
+    projects: '20+',
     experience: '3yr',
     clients: '15+'
   },

@@ -15,6 +15,17 @@ body {
   color: #111111;
   line-height: 1.6;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure no margin on any container */
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Scrollbar */

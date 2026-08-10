@@ -25,8 +25,9 @@ const Navbar = () => {
     }
   };
 
-  // Navigation items for sidebar
+  // Navigation items for sidebar - Added Home
   const navItems = [
+    { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
     { label: 'Services', href: '#services' },
@@ -47,7 +48,7 @@ const Navbar = () => {
               <span></span>
               <span></span>
             </span>
-            MENU
+            <span className="menu-text">MENU</span>
           </button>
         </div>
       </nav>

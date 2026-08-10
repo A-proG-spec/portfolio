@@ -12,7 +12,7 @@ const Hero = () => {
   const rightRef = useRef(null);
 
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
+    { number: '20+', label: 'Projects Completed' },
     { number: '3+', label: 'Years Experience' },
     { number: '15+', label: 'Happy Clients' }
   ];
@@ -92,17 +92,16 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="hero-left" ref={leftRef}>
             <div className="hero-brand hero-animated">
-              <span className="dot"></span>
-              ANTENEH WONDWOSEN
+              <span ></span>
             </div>
 
-            <p className="hero-greeting hero-animated">Hey. I'm Anteneh,</p>
+            <p className="hero-greeting hero-animated">Hey. I'm</p>
 
             <h1 className="hero-name hero-animated">ANTENEH</h1>
 
             <div className="hero-title-line hero-animated">
               <span className="hero-title-bold">A Fullstack</span>
-              <span className="hero-title-serif">&amp; Product</span>
+              <span className="hero-title-serif">&amp; Mobile App</span>
               <span className="hero-title-bold">DEVELOPER</span>
             </div>
 

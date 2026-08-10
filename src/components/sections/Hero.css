@@ -2,13 +2,14 @@
 .hero-section {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: #F5F3EE;
   padding: 0;
   position: relative;
   overflow: hidden;
   margin-top: 0;
   z-index: 10;
+  padding-top: 0;
 }
 
 .hero-container {
@@ -20,23 +21,24 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr 0.9fr;
+  grid-template-columns: 1fr 1.3fr 0.9fr; /* Increased image column from 1.1fr to 1.3fr */
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding: 0;
   padding-top: 0;
   margin-top: 0;
+  padding-bottom: 2rem;
 }
 
-/* Left Column */
+/* Left Column - NO PADDING AT TOP */
 .hero-left {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   padding-top: 0;
   margin-top: 0;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-brand {
@@ -124,19 +126,21 @@
   margin-top: 0.4rem;
 }
 
-/* Center Column - Image */
+/* Center Column - Image - INCREASED SIZE */
 .hero-center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 0;
 }
 
 .hero-image-wrapper {
   width: 100%;
-  max-width: 368px;
+  max-width: 440px; /* Increased from 368px */
   aspect-ratio: 3/4;
   position: relative;
   will-change: transform, opacity;
+  margin-top: 0;
 }
 
 .hero-image {
@@ -161,9 +165,9 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 2.4rem;
-  padding-top: 0;
+  padding-top: 5rem;
   margin-top: 0;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-stats {
@@ -273,8 +277,12 @@
 /* Responsive */
 @media (max-width: 1200px) {
   .hero-grid {
-    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-columns: 1fr 1.2fr 0.8fr; /* Adjusted for tablet */
     gap: 1.6rem;
+  }
+  
+  .hero-image-wrapper {
+    max-width: 380px; /* Increased from 300px */
   }
   
   .hero-name {
@@ -303,11 +311,31 @@
     grid-template-columns: 1fr 1fr;
     gap: 1.6rem;
     min-height: auto;
-    padding-top: 4rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
   }
   
   .hero-left {
+    padding-top: 0;
     gap: 0.8rem;
+  }
+  
+  .hero-center {
+    padding-top: 0;
+  }
+  
+  .hero-image-wrapper {
+    max-width: 300px; /* Increased from 256px */
+  }
+  
+  .hero-right {
+    padding-top: 1.5rem;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
   
   .hero-name {
@@ -329,20 +357,6 @@
   .hero-description {
     max-width: 100%;
     font-size: 0.72rem;
-  }
-  
-  .hero-image-wrapper {
-    max-width: 256px;
-  }
-  
-  .hero-right {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.2rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
   
   .hero-stats {
@@ -374,7 +388,8 @@
     gap: 1.2rem;
     min-height: auto;
     padding: 0;
-    padding-top: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
   }
   
   .hero-center {
@@ -383,15 +398,23 @@
   }
   
   .hero-image-wrapper {
-    max-width: 176px;
+    max-width: 200px; /* Increased from 176px */
     margin: 0 auto;
   }
   
   .hero-left {
+    padding-top: 0;
     gap: 0.6rem;
     text-align: center;
     align-items: center;
-    padding-top: 0;
+  }
+  
+  .hero-right {
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
   
   .hero-brand {
@@ -443,14 +466,6 @@
     justify-content: center;
   }
   
-  .hero-right {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.2rem;
-    padding-top: 0.8rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-  }
-  
   .hero-stats {
     flex-direction: row;
     justify-content: space-around;
@@ -480,11 +495,20 @@
   .hero-grid {
     padding: 0;
     gap: 0.8rem;
-    padding-top: 3rem;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .hero-center {
+    padding-top: 0;
   }
   
   .hero-image-wrapper {
-    max-width: 136px;
+    max-width: 170px; /* Increased from 136px */
+  }
+  
+  .hero-left {
+    padding-top: 0;
   }
   
   .hero-brand {
@@ -545,11 +569,15 @@
 @media (max-width: 380px) {
   .hero-grid {
     padding: 0;
-    padding-top: 2.5rem;
+    padding-top: 0;
+  }
+  
+  .hero-center {
+    padding-top: 0;
   }
   
   .hero-image-wrapper {
-    max-width: 112px;
+    max-width: 140px; /* Increased from 112px */
   }
   
   .hero-name {
