@@ -2,11 +2,12 @@
 @import '@fontsource/playfair-display/500.css';
 @import '@fontsource/playfair-display/600.css';
 @import '@fontsource/playfair-display/700.css';
-@import '@fontsource/inter/300.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
+@import '@fontsource/outfit/300.css';
+@import '@fontsource/outfit/400.css';
+@import '@fontsource/outfit/500.css';
+@import '@fontsource/outfit/600.css';
+@import '@fontsource/outfit/700.css';
+@import '@fontsource/outfit/800.css';
 
 * {
   margin: 0;
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   background: #000000;
   color: #ffffff;
   line-height: 1.6;
@@ -55,7 +56,7 @@ section {
 }
 
 .section-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   color: #004d99;
@@ -78,7 +79,7 @@ section {
 }
 
 .section-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.1rem;
   color: #b3b3b3;
   max-width: 500px;
@@ -87,7 +88,7 @@ section {
 
 /* Buttons */
 .btn-primary {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   padding: 0.9rem 2.5rem;
   background: #004d99;
   color: #ffffff;
@@ -108,7 +109,7 @@ section {
 }
 
 .btn-secondary {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   padding: 0.9rem 2.5rem;
   background: transparent;
   color: #ffffff;

@@ -1,8 +1,10 @@
 .footer {
-  background: #FFFFFF;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #000000; /* UPDATED: Black background */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: White/grey border */
   padding: 2rem 0 1.5rem 0;
   width: 100%;
+  position: relative;
+  z-index: 100; /* Ensures it sits on top of the flow */
 }
 
 .footer-content {
@@ -14,10 +16,10 @@
 }
 
 .footer-logo {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #000000;
+  color: #ffffff; /* UPDATED: White text */
   letter-spacing: -0.5px;
 }
 
@@ -27,8 +29,8 @@
 }
 
 .footer-social a {
-  font-family: 'Inter', sans-serif;
-  color: #444444;
+font-family: 'Outfit', sans-serif;
+  color: #b3b3b3; /* UPDATED: Light grey text */
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
@@ -36,18 +38,18 @@
 }
 
 .footer-social a:hover {
-  color: #000000;
+  color: #004d99; /* UPDATED: Blue accent on hover */
 }
 
 .footer-copy {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 0.75rem;
-  color: #888888;
+  color: #666666; /* UPDATED: Medium grey text */
   width: 100%;
   text-align: center;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* UPDATED: Subtle white divider */
 }
 
 @media (max-width: 768px) {

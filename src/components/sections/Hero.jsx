@@ -68,12 +68,10 @@ const Hero = () => {
       ease: 'power2.out',
     }, 0);
 
-    // Background color shifts
-    tl.to(section, {
-      backgroundColor: '#FFFFFF',
-      duration: 0.8,
-      ease: 'power1.out',
-    }, 0);
+    /* 
+     * DELETED: The background color shift to white.
+     * This allows your new black background in Hero.css to stay permanent.
+     */
 
     // Cleanup
     return () => {

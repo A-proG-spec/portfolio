@@ -10,22 +10,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   background: #F5F3EE;
   color: #111111;
   line-height: 1.6;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-/* Ensure no margin on any container */
-#root {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Scrollbar */
@@ -66,7 +55,7 @@ section {
 }
 
 .section-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   color: #000066;
@@ -76,7 +65,7 @@ section {
 }
 
 .section-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #111111;
@@ -89,7 +78,7 @@ section {
 }
 
 .section-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1rem;
   color: #444444;
   max-width: 500px;
@@ -98,7 +87,7 @@ section {
 
 /* Buttons */
 .btn-primary {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   padding: 0.9rem 2.5rem;
   background: #181818;
   color: #FFFFFF;
@@ -129,7 +118,7 @@ section {
 }
 
 .btn-secondary {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   padding: 0.9rem 2.5rem;
   background: transparent;
   color: #111111;
@@ -149,18 +138,27 @@ section {
   background: rgba(0, 0, 102, 0.02);
 }
 
-/* ========== SCROLL ANIMATION BASE STYLES ========== */
+/* ========== GLASSMORPHISM BASE STYLES ========== */
+.glass-overlay {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
 
-/* Performance optimization for animated elements */
+.glass-content {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Performance */
 .scroll-animated {
   will-change: transform, opacity;
   backface-visibility: hidden;
   perspective: 1000px;
-}
-
-/* Container for sections with scroll animations */
-.animation-container {
-  contain: layout, paint, style;
 }
 
 /* Responsive */

@@ -1,14 +1,15 @@
-/* Hero Section - Editorial Style */
+/* Hero Section - Sticky Background */
 .hero-section {
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
-  background: #F5F3EE;
+  background: #000000 !important; /* UPDATED: Black background */
   padding: 0;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   overflow: hidden;
   margin-top: 0;
-  z-index: 10;
   padding-top: 0;
 }
 
@@ -21,7 +22,7 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr 0.9fr; /* Increased image column from 1.1fr to 1.3fr */
+  grid-template-columns: 1fr 1.3fr 0.9fr;
   gap: 2rem;
   align-items: flex-start;
   min-height: 100vh;
@@ -42,10 +43,10 @@
 }
 
 .hero-brand {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 0.6rem;
   font-weight: 600;
-  color: #000066;
+  color: #004d99; /* UPDATED: Blue accent */
   letter-spacing: 1.6px;
   text-transform: uppercase;
   display: flex;
@@ -57,25 +58,25 @@
 .hero-brand .dot {
   width: 4.8px;
   height: 4.8px;
-  background: #000066;
+  background: #004d99; /* UPDATED: Blue accent */
   border-radius: 50%;
   display: inline-block;
 }
 
 .hero-greeting {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 0.8rem;
-  color: #444444;
+  color: #ffffff; /* UPDATED: White */
   font-weight: 400;
   letter-spacing: 0.4px;
   margin-top: 0;
 }
 
 .hero-name {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 3.6rem;
   font-weight: 700;
-  color: #111111;
+  color: #ffffff; /* UPDATED: White */
   line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -90,10 +91,10 @@
 }
 
 .hero-title-bold {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #111111;
+  color: #ffffff; /* UPDATED: White */
   line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -104,7 +105,7 @@
   font-size: 2.8rem;
   font-weight: 700;
   font-style: italic;
-  color: #111111;
+  color: #ffffff; /* UPDATED: White */
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -114,9 +115,9 @@
 }
 
 .hero-description {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 0.76rem;
-  color: #444444;
+  color: #b3b3b3; /* UPDATED: Light grey */
   line-height: 1.8;
   max-width: 304px;
   margin-top: 0.2rem;
@@ -126,7 +127,7 @@
   margin-top: 0.4rem;
 }
 
-/* Center Column - Image - INCREASED SIZE */
+/* Center Column - Image */
 .hero-center {
   display: flex;
   justify-content: center;
@@ -136,7 +137,7 @@
 
 .hero-image-wrapper {
   width: 100%;
-  max-width: 440px; /* Increased from 368px */
+  max-width: 480px;
   aspect-ratio: 3/4;
   position: relative;
   will-change: transform, opacity;
@@ -148,7 +149,7 @@
   height: 100%;
   border-radius: 0 0 40% 40% / 0 0 30% 30%;
   overflow: hidden;
-  background: #E8E5DE;
+  background: #1a1a1a; /* UPDATED: Dark grey fallback for image bg */
   position: relative;
 }
 
@@ -180,7 +181,7 @@
 
 .hero-stat {
   text-align: right;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: White divider */
   padding-bottom: 1.2rem;
   will-change: transform, opacity;
 }
@@ -191,26 +192,26 @@
 }
 
 .hero-stat-number {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #111111;
+  color: #ffffff; /* UPDATED: White */
   display: block;
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .hero-stat-label {
-  font-family: 'Inter', sans-serif;
+font-family: 'Outfit', sans-serif;
   font-size: 0.6rem;
-  color: #666666;
+  color: #b3b3b3; /* UPDATED: Light grey */
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-top: 0.2rem;
   display: block;
 }
 
-/* ========== HERO ENTRANCE ANIMATIONS ========== */
+/* ========== HERO ENTRANCE ANIMATIONS (KEPT UNCHANGED) ========== */
 
 .hero-animated {
   opacity: 0;
@@ -274,15 +275,15 @@
   }
 }
 
-/* Responsive */
+/* Responsive - UPDATED BORDERS TO WHITE */
 @media (max-width: 1200px) {
   .hero-grid {
-    grid-template-columns: 1fr 1.2fr 0.8fr; /* Adjusted for tablet */
+    grid-template-columns: 1fr 1.2fr 0.8fr;
     gap: 1.6rem;
   }
   
   .hero-image-wrapper {
-    max-width: 380px; /* Increased from 300px */
+    max-width: 400px;
   }
   
   .hero-name {
@@ -305,6 +306,7 @@
 @media (max-width: 992px) {
   .hero-section {
     min-height: auto;
+    position: relative;
   }
   
   .hero-grid {
@@ -325,7 +327,7 @@
   }
   
   .hero-image-wrapper {
-    max-width: 300px; /* Increased from 256px */
+    max-width: 320px;
   }
   
   .hero-right {
@@ -335,7 +337,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: White border */
   }
   
   .hero-name {
@@ -381,6 +383,7 @@
     min-height: auto;
     padding: 0;
     padding-top: 0;
+    position: relative;
   }
   
   .hero-grid {
@@ -398,7 +401,7 @@
   }
   
   .hero-image-wrapper {
-    max-width: 200px; /* Increased from 176px */
+    max-width: 220px;
     margin: 0 auto;
   }
   
@@ -414,7 +417,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 1.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: White border */
   }
   
   .hero-brand {
@@ -504,7 +507,7 @@
   }
   
   .hero-image-wrapper {
-    max-width: 170px; /* Increased from 136px */
+    max-width: 170px;
   }
   
   .hero-left {
@@ -577,7 +580,7 @@
   }
   
   .hero-image-wrapper {
-    max-width: 140px; /* Increased from 112px */
+    max-width: 140px;
   }
   
   .hero-name {

@@ -49,7 +49,14 @@ projects: [
     category: 'AI Product',
     github: 'https://github.com/A-proG-spec/olympus-personal-ai-project-manager',
     tech: ['AI', 'Node.js', 'React']
-  }
+  },{
+    id: 5,
+    title: 'ChatterBox - Real-time Chat App',
+    description: 'A full-featured real-time chat application enabling instant messaging with typing indicators, read receipts, and online presence. Built with the MERN stack and Socket.IO for seamless, low-latency communication.',
+    category: 'Real-time Application',
+    github: 'https://github.com/A-proG-spec/chatting-app',
+    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.IO', 'JWT']
+}
 ],
   blogPosts: [
     {
