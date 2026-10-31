@@ -8,11 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Completely transparent outer background */
   background: transparent; 
 }
 
-/* Outer container - Pure transparent */
+/* Outer container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -21,77 +20,66 @@
   background: transparent;
 }
 
-/* === THE INNER FROSTED GLASS CARD === */
+/* === DARK GLASS CONTAINER (High Readability) === */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 3.2rem;
   align-items: start;
   max-width: 960px;
   margin: 0 auto;
-  padding: 4rem 3.5rem; /* Space inside the glass */
+  padding: 3.5rem;
   
-  /* === LIQUID FROSTED GLASS EFFECT === */
-  background: linear-gradient(
-    135deg, 
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  backdrop-filter: blur(14px); /* Frosted effect */
-  -webkit-backdrop-filter: blur(14px);
+  /* Dark translucent overlay for strong text contrast */
+  background: rgba(15, 15, 18, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   
-  /* === BORDER & RADIUS === */
-  border-radius: 8px; /* Requested 10px border radius */
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   
-  /* === SHADOWS === */
   box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.5), /* Shiny top edge */
-    0 25px 50px -12px rgba(0, 0, 0, 0.15); /* Soft float shadow */
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 25px 50px -12px rgba(0, 0, 0, 0.5);
     
-  /* Liquid float animation */
   transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* Hover effect to make the liquid feel 'alive' */
 .about-grid:hover {
-  transform: translateY(-5px);
-  backdrop-filter: blur(18px);
+  transform: translateY(-4px);
+  backdrop-filter: blur(24px);
   box-shadow: 
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    0 30px 60px -12px rgba(0, 0, 0, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 30px 60px -12px rgba(0, 0, 0, 0.6);
 }
 
 /* ========== CONTENT INSIDE THE GLASS ========== */
 
-/* Left Column - Label & Title */
 .about-left {
   display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  flex-direction: flex-column;
+  gap: 1rem;
   padding-top: 0.4rem;
 }
 
 .about-label {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.56rem;
-  font-weight: 600;
-  color: #000066;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #60a5fa; /* Crisp light accent blue */
   text-transform: uppercase;
-  letter-spacing: 2.4px;
+  letter-spacing: 2px;
   display: block;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 .about-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 2.24rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #111111;
-  line-height: 1.15;
+  color: #ffffff;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   margin: 0;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 /* Right Column - Content */
@@ -103,72 +91,69 @@
 
 .about-greeting {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: #111111;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f3f4f6; /* Bright white text */
+  line-height: 1.5;
   margin: 0;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 .about-bio {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.8rem;
-  color: #333333;
-  line-height: 1.9;
+  font-size: 0.95rem;
+  color: #d1d5db; /* High-contrast soft gray */
+  line-height: 1.65;
   margin: 0;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.15);
 }
 
 .about-bio strong {
-  color: #000066;
+  color: #60a5fa;
   font-weight: 600;
 }
 
 .about-cta {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .about-cta .btn-secondary {
   font-family: 'Outfit', sans-serif;
-  padding: 0.64rem 1.6rem;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  color: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.75rem 1.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   font-weight: 500;
-  font-size: 0.68rem;
+  font-size: 0.85rem;
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .about-cta .btn-secondary:hover {
-  border-color: #000066;
-  color: #000066;
-  background: rgba(255, 255, 255, 0.4);
+  border-color: #60a5fa;
+  color: #ffffff;
+  background: rgba(96, 165, 250, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
 }
 
 /* Skills Tags */
 .about-skills {
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
 }
 
 .about-skills-label {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.56rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: #555555;
+  color: #9ca3af;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.5px;
   display: block;
   margin-bottom: 0.6rem;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 .about-skills-grid {
@@ -179,25 +164,23 @@
 
 .skill-tag {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.68rem;
-  color: #333333;
-  padding: 0.32rem 0.96rem;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 50px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   display: inline-block;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
 }
 
 .skill-tag:hover {
-  background: rgba(255, 255, 255, 0.4);
-  border-color: #000066;
-  color: #000066;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #60a5fa;
+  color: #60a5fa;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
@@ -206,110 +189,35 @@
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 3rem 2rem;
-  }
-  
-  .about-left {
-    padding-top: 0;
+    padding: 2.5rem 2rem;
   }
   
   .about-title {
-    font-size: 1.92rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .about-section {
     padding: 3rem 0;
-    /* Black background on mobile */
-    background: #000000;
   }
   
   .about-grid {
     gap: 1.5rem;
     padding: 2rem 1.5rem;
-    border-radius: 10px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    /* Adjusted glass for dark background */
-    background: linear-gradient(
-      135deg, 
-      rgba(255, 255, 255, 0.25) 0%, 
-      rgba(255, 255, 255, 0.08) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
   }
   
-  .about-grid:hover {
-    backdrop-filter: blur(16px);
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.3),
-      0 30px 60px -12px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Update text colors for dark background */
   .about-title {
-    font-size: 1.6rem;
-    color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
   }
   
   .about-greeting {
-    font-size: 0.8rem;
-    color: #e0e0e0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 0.95rem;
   }
   
   .about-bio {
-    font-size: 0.76rem;
-    color: #cccccc;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about-label {
-    color: #6699ff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about-skills-label {
-    color: #aaaaaa;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about-cta .btn-secondary {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .about-cta .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    border-color: #6699ff;
-    color: #6699ff;
-  }
-  
-  .skill-tag {
-    color: #e0e0e0;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .skill-tag:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #6699ff;
-    color: #6699ff;
-  }
-  
-  .about-skills-grid {
-    gap: 0.4rem;
-  }
-  
-  .skill-tag {
-    font-size: 0.64rem;
-    padding: 0.24rem 0.8rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -320,39 +228,14 @@
   
   .about-grid {
     padding: 1.5rem 1rem;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: linear-gradient(
-      135deg, 
-      rgba(255, 255, 255, 0.2) 0%, 
-      rgba(255, 255, 255, 0.06) 100%
-    );
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .about-title {
-    font-size: 1.44rem;
-  }
-  
-  .about-bio {
-    font-size: 0.72rem;
-  }
-  
-  .about-greeting {
-    font-size: 0.72rem;
   }
   
   .about-cta .btn-secondary {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.6rem;
     width: 100%;
     text-align: center;
-    justify-content: center;
   }
 }
 
-/* Performance optimization */
 .about-grid {
   will-change: transform, backdrop-filter;
   contain: layout, paint, style;
