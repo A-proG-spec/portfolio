@@ -7,7 +7,7 @@ const Contact = () => {
         <div className="contact-header">
           <span className="section-label">Contact</span>
           <h2 className="section-title">
-            Available for <span>projects</span>
+            Available for projects
           </h2>
           <p className="section-subtitle">
             Share a few details, and I'll get back with a clear direction.

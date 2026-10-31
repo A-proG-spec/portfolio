@@ -77,7 +77,6 @@ const Navbar = () => {
         <div className="menu-panel-social">
           <a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href={portfolioData.social.twitter} target="_blank" rel="noopener noreferrer">Twitter</a>
           <a href={portfolioData.social.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>

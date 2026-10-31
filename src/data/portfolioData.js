@@ -56,6 +56,13 @@ projects: [
     category: 'Real-time Application',
     github: 'https://github.com/A-proG-spec/chatting-app',
     tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.IO', 'JWT']
+},{
+    id: 6,
+    title: 'Pointnova Telegram mini app',
+    description: 'A full-featured real-time chat application enabling instant messaging with typing indicators, read receipts, and online presence. Built with the MERN stack and Socket.IO for seamless, low-latency communication.',
+    category: 'Real-time Application',
+    github: 'https://github.com/A-proG-spec/chatting-app',
+    tech: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Socket.IO', 'JWT']
 }
 ],
   blogPosts: [
@@ -84,10 +91,9 @@ projects: [
 
   social: {
     github: 'https://github.com/A-proG-spec',
-    instagram: 'https://instagram.com/yourusername',
-    telegram: 'https://t.me/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
-    twitter: 'https://twitter.com/yourusername'
+    instagram: 'https://www.instagram.com/anteneh_jv/',
+    telegram: 'https://t.me/anteneh_ws',
+    linkedin: 'http://www.linkedin.com/in/anteneh-wondwosen-a69992293',
   },
 
   navItems: [

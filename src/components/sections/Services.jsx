@@ -5,7 +5,7 @@ const Services = () => {
     {
       title: 'Frontend Development',
       description: 'Building responsive, interactive user interfaces using React, Next.js, CSS3, and Tailwind CSS.',
-      icon: '⟨/⟩'
+      icon: '</>'
     },
     {
       title: 'Backend Development',
@@ -43,7 +43,7 @@ const Services = () => {
         <div className="services-header">
           <span className="section-label">What I Do</span>
           <h2 className="section-title">
-            My <span>Services</span>
+            My Services
           </h2>
           <p className="section-subtitle">
             Full-stack development expertise across the entire technology spectrum — 

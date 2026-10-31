@@ -12,7 +12,7 @@ const Projects = () => {
         <div className="projects-header">
           <span className="section-label">Portfolio</span>
           <h2 className="section-title">
-            Projects I've <span>Built</span>
+            Projects I've Built
           </h2>
           <p className="section-subtitle">
             A collection of full-stack applications built with the MERN stack and modern technologies.
